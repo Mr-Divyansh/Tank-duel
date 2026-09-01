@@ -1,0 +1,22 @@
+
+  :root { --app-height: 100vh; }
+  html, body {
+    margin: 0; padding: 0;
+    height: var(--app-height);
+    background: radial-gradient(ellipse at center, #16161c 0%, #08080a 72%);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+    overscroll-behavior: none;
+    touch-action: none;
+  }
+  canvas {
+    background: #0a0a0c;
+    display: block;
+    box-shadow: 0 0 80px rgba(120,140,255,0.10), 0 0 34px rgba(0,0,0,0.75);
+    border-radius: 8px;
+    opacity: 0;
+    transform: scale(0.96);
+    transition: opacity 0.6s ease, transform 0.6s cubic-bezier(.2,.8,.2,1);
+  }
+  canvas.ready { opacity: 1; transform: scale(1); }
